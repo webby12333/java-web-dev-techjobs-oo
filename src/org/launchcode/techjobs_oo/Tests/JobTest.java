@@ -47,11 +47,17 @@ public class JobTest {
         assertFalse(test_job.equals(test_jobTwo));
     }
 
-//    @Test
-////    public void firstTestToString() {
+    @Test
+    public void firstTestToString() {
+
 //        assertEquals(test_job.toString(), "Goodbye");
-//        assertTrue(test_job.toString().endsWith(" "));
-//        assertTrue(test_job.toString().startsWith(" "));
-//    }
+        assertTrue(test_job.toString().contains(" "));
+        assertTrue(test_job.toString().endsWith(" "));
+    }
+
+    @Test
+    public void secondTestToString() {
+
+    }
 
 }
