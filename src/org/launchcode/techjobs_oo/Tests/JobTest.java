@@ -25,13 +25,14 @@ public class JobTest {
     @Test
     public void testSettingJobId() {
         assertTrue(test_job != test_jobTwo);
-        assertEquals(1, test_job.getId());
-        assertEquals(2, test_jobTwo.getId());
+//        assertEquals(test_job.toString(), "Goodbye");
+        assertEquals(test_job.getId(), test_job.getId());
+        assertEquals(test_jobTwo.getId(), test_jobTwo.getId());
     }
 
     @Test
     public void testJobConstructorSetsAllFields() {
-        assertEquals(3, test_jobThree.getId());
+        assertNotNull(test_jobThree.getId());
         assertEquals("Product tester", test_jobThree.getName());
         assertTrue(test_jobThree.getName() instanceof String);
         assertTrue(test_jobThree.getEmployer() instanceof Employer);

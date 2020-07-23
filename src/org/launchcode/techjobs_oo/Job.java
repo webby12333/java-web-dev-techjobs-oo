@@ -93,7 +93,7 @@ public class Job {
                 "Employer:" + " " + employerString + " " + System.lineSeparator() +
                 "Location:" + " " + locationString + " " + System.lineSeparator() +
                 "Position Type:" + " " + positionString + " " + System.lineSeparator() +
-                "Core Competency:" + " " + coreString + " ";
+                "Core Competency:" + " " + coreString + " " + System.lineSeparator() + "";
     }
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
