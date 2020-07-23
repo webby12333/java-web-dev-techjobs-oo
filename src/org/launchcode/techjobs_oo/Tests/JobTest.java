@@ -11,12 +11,14 @@ public class JobTest {
     Job test_job;
     Job test_jobTwo;
     Job test_jobThree;
+    Job test_jobFour;
     @Before
     public void createJobObject() {
 
         test_job = new Job("Name", new Employer("launchCode"), new Location("saint louis"), new PositionType("positionType"), new CoreCompetency("coreCompetency"));
         test_jobTwo = new Job("Name", new Employer("launchCode"), new Location("saint louis"), new PositionType("positionType"), new CoreCompetency("coreCompetency"));
         test_jobThree = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        test_jobFour = new Job(null, null, null, null, null);
     }
 
 
@@ -57,7 +59,18 @@ public class JobTest {
 
     @Test
     public void secondTestToString() {
-
+        assertTrue(test_job.toString().contains(System.lineSeparator()));
+        assertTrue(test_job.toString().contains("ID"));
+        assertTrue(test_job.toString().contains("Name"));
+        assertTrue(test_job.toString().contains("Employer"));
+        assertTrue(test_job.toString().contains("Location"));
+        assertTrue(test_job.toString().contains("Position Type"));
+        assertTrue(test_job.toString().contains("Core Competency"));
     }
+
+    @Test
+    public void thirdTestToString() {
+        assertTrue(test_jobFour.toString().contains("Data not available"));
+        }
 
 }

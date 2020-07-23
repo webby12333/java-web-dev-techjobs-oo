@@ -56,15 +56,44 @@ public class Job {
 
     @Override
     public String toString() {
-        if (1 ==1) {
+       String nameString = name;
+       Employer employerString = new Employer();
+       Location locationString = new Location();
+       PositionType positionString = new PositionType();
+       CoreCompetency coreString = new CoreCompetency();
+       if (name == null) {
+           nameString = "Data not available";
+       }
+       if (employer == null) {
+           employerString.setValue("Data not available");
+       } else {
+           employerString = employer;
+       }
 
-        }
+       if (location == null) {
+           locationString.setValue("Data not available");
+       } else {
+           locationString = location;
+       }
+
+       if (positionType == null) {
+           positionString.setValue("Data not available");
+       } else {
+           positionString = positionType;
+       }
+
+       if (coreCompetency == null) {
+           coreString.setValue("Data not available");
+       } else {
+           coreString = coreCompetency;
+       }
+
         return  "ID:" + " " + id + " " + System.lineSeparator() +
-                "Name:" + " " + name + " " + System.lineSeparator() +
-                "Employer:" + " " + employer + " " + System.lineSeparator() +
-                "Location:" + " " + location + " " + System.lineSeparator() +
-                "Position Type:" + " " + positionType + " " + System.lineSeparator() +
-                "Core Competency:" + " " + coreCompetency + " ";
+                "Name:" + " " + nameString + " " + System.lineSeparator() +
+                "Employer:" + " " + employerString + " " + System.lineSeparator() +
+                "Location:" + " " + locationString + " " + System.lineSeparator() +
+                "Position Type:" + " " + positionString + " " + System.lineSeparator() +
+                "Core Competency:" + " " + coreString + " ";
     }
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
